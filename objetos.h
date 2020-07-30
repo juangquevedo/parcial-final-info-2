@@ -9,6 +9,7 @@ class objetos
 public:
     objetos(int x, double na);
     void actualizar();
+    bool contacto(int px,int py);
     double a;
     QGraphicsEllipseItem *circulo= new QGraphicsEllipseItem;
 };

@@ -14,6 +14,7 @@ public:
     double xo,yo,rad,vox,voy;
     double long mas,ax=0,ay=0;
     void calcular(QVector <planeta> planetas, double long G,double long T);
+    void cambiar_color(int op);
 };
 
 #endif // PLANETA_H
