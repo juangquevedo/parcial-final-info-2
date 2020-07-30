@@ -17,10 +17,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    planeta.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    planeta.h
 
 FORMS += \
     mainwindow.ui
