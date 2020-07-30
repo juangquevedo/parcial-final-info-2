@@ -8,11 +8,13 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     timer= new QTimer;
 
     ui->graphicsView->setScene(scena);
-    scena->setSceneRect(0,0,980,520);
+    scena->setSceneRect(0,0,700,700);
 
     timer->stop();
     connect(timer,SIGNAL(timeout()),this,SLOT(actcualizar()));
-    timer->start(5);
+
+
+    iniciar();
 }
 
 MainWindow::~MainWindow(){
@@ -30,7 +32,10 @@ void MainWindow::iniciar(){
 }
 
 void MainWindow::on_pushButton_clicked(){
+    timer->start(5);
 }
 
 void MainWindow::actcualizar(){
+    for(it=planetas.begin();it!=planetas.end();it++)
+        it->calcular(planetas,1,1);
 }
