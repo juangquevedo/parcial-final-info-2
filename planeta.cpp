@@ -21,11 +21,11 @@ void planeta::calcular(QVector<planeta> planetas,double long G,double long T){
     ax=0;
     ay=0;
     for(it=planetas.begin();it!=planetas.end();it++){
-        r=sqrt(pow(it->xo-xo,2)+pow(it->yo-yo,2));
+        r=sqrt(pow(((*it).xo)-xo,2)+pow(((*it).yo)-yo,2));
         if(r!=0){
-            temp=(G*it->mas)/pow(abs(r),3);
-            ax+=temp*(it->xo-xo);
-            ay+=temp*(it->yo-yo);}
+            temp=(G*((*it).mas))/pow(abs(r),3);
+            ax+=temp*(((*it).xo)-xo);
+            ay+=temp*(((*it).yo)-yo);}
     }
     vox+=ax*T;
     voy+=ay*T;

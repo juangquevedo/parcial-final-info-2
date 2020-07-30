@@ -4,7 +4,10 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QGraphicsScene>
+#include <stdlib.h>
+#include <time.h>
 #include "planeta.h"
+#include "objetos.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,5 +33,7 @@ private:
     QTimer *timer;
     QVector <planeta> planetas;
     QVector <planeta>::iterator it;
+    QList <objetos> obj;
+    QList <objetos>::iterator itb;
 };
 #endif // MAINWINDOW_H

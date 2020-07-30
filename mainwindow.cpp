@@ -13,8 +13,9 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     timer->stop();
     connect(timer,SIGNAL(timeout()),this,SLOT(actcualizar()));
 
-
     iniciar();
+
+    timer->start(5);
 }
 
 MainWindow::~MainWindow(){
@@ -32,7 +33,11 @@ void MainWindow::iniciar(){
 }
 
 void MainWindow::on_pushButton_clicked(){
-    timer->start(5);
+    srand(time(NULL));
+    int x=(10)+rand()%(691-10);
+    int a=(1)+rand()%(5+1);
+    obj.push_back(objetos(x,a));
+    scena->addItem(obj.back().circulo);
 }
 
 void MainWindow::actcualizar(){
